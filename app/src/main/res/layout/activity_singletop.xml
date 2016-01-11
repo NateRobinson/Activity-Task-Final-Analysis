@@ -5,12 +5,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/standard_btn"
+        android:id="@+id/new_btn"
         style="@style/CustomButton"
-        android:text="Standard启动模式" />
-
-    <Button
-        android:id="@+id/singletop_btn"
-        style="@style/CustomButton"
-        android:text="SingleTop启动模式" />
+        android:text="继续打开新界面" />
 </LinearLayout>
