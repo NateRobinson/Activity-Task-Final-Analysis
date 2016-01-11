@@ -3,10 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.gu.task.MainActivity">
 
     <Button
         android:id="@+id/androidmainifest_btn"
         style="@style/CustomButton"
         android:text="AndroidMainifest中设置启动模式" />
+
+    <Button
+        android:id="@+id/intent_flag_btn"
+        style="@style/CustomButton"
+        android:text="通过IntentFlag设置启动模式" />
 </LinearLayout>

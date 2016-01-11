@@ -47,3 +47,23 @@ Activity任务栈模式终极分析：在吸收了网络上各路大神的分析
 
 使用singletop和singleinstance这两种模式的Activity中，不能使用startActivityForResult()方法来启动另一个Activity,具体讲解见网上大神博客：<a href="http://blog.csdn.net/xiabo851205/article/details/8491267" target="_blank" >http://blog.csdn.net/xiabo851205/article/details/8491267</a>
 
+## IntentFlag启动模式 ##
+
+**一、Intent.FLAG_ACTIVITY_NEW_TASK**
+
+我在代码中使用`intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);`来设置了Activity的启动模式，但是真实跑起来，发现并无效果，后来才知道此FLAG的一般应用场景：通常使用在从Service中启动Activity的场景，由于在Service中不存在Activity栈，所以使用该Flag来创建一个新的Activity栈：
+
+
+![FLAG_ACTIVITY_NEW_TASK启动模式任务栈分析图](https://github.com/NateRobinson/Activity-Task-Final-Analysis/blob/master/imgs/6.png?raw=true)
+
+**二、Intent.FLAG_ACTIVITY_SINGLE_TOP**
+
+同`android:launchMode="singTop"`
+
+**三、Intent.FLAG_ACTIVITY_CLEAR_TOP**
+
+同`android:launchMode="singleTask"`
+
+**四、Intent.FLAG_ACTIVITY_NO_HISTORY**
+
+使用了该模式的Activity，当这个Activity启动了其他的Activity之后就会消失，不会存在任务栈之中。

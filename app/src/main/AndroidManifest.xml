@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".androidmainifest.MainifestMainActivity" />
+        <activity android:name=".intentflag.IntentFlagMainActivity" />
         <activity android:name=".androidmainifest.standard.StandardModeActivity" />
         <activity android:name=".androidmainifest.singletask.NormalActivity" />
         <activity
@@ -27,6 +28,8 @@
         <activity
             android:name=".androidmainifest.singleinstance.SingleInstaceActivity"
             android:launchMode="singleInstance" />
+        <activity
+            android:name=".intentflag.NewTaskActivity" />
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.gu.task.androidmainifest.MainifestMainActivity;
 import com.gu.task.base.BaseActivity;
+import com.gu.task.intentflag.IntentFlagMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +19,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MainifestMainActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.intent_flag_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, IntentFlagMainActivity.class);
                 startActivity(intent);
             }
         });
