@@ -1,4 +1,4 @@
-package com.gu.task.androidmainifest.singletop;
+package com.gu.task.androidmainifest.singletask;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,16 +11,15 @@ import com.gu.task.base.BaseActivity;
 /**
  * Created by Nate on 2016/1/11.
  */
-public class SingleTopActivity extends BaseActivity {
-
+public class SingleTaskActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_singletop);
+        setContentView(R.layout.activity_singletask);
         findViewById(R.id.new_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SingleTopActivity.this, SingleTopActivity.class);
+                Intent intent = new Intent(SingleTaskActivity.this, NormalActivity.class);
                 startActivity(intent);
             }
         });
@@ -30,6 +29,6 @@ public class SingleTopActivity extends BaseActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Log.e("nate","SingleTopActivity===>onNewIntent");
+        Log.e("nate","SingleTaskActivity===>onNewIntent");
     }
 }

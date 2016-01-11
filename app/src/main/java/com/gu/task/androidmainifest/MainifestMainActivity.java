@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.gu.task.R;
+import com.gu.task.androidmainifest.singletask.SingleTaskActivity;
 import com.gu.task.androidmainifest.singletop.SingleTopActivity;
 import com.gu.task.androidmainifest.standard.StandardModeActivity;
 import com.gu.task.base.BaseActivity;
@@ -29,6 +30,13 @@ public class MainifestMainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainifestMainActivity.this, SingleTopActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.singletask_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainifestMainActivity.this, SingleTaskActivity.class);
                 startActivity(intent);
             }
         });

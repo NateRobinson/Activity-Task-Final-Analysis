@@ -22,6 +22,12 @@ Activity任务栈模式终极分析：在吸收了网络上各路大神的分析
 
 **二、singleTop**
  
-打开该模式下的Activity，系统会判断当前任务栈的栈顶是不是此Activity，如果是则不创建新的Activity，否则创建新的Activity：
+打开该模式下的Activity，系统会判断当前任务栈的栈顶是不是此Activity，如果是则不创建新的Activity直接引用并且会执行`onNewIntent(Intent intent)`方法，否则创建新的Activity：
 ![singletop启动模式任务栈分析图](https://github.com/NateRobinson/Activity-Task-Final-Analysis/blob/master/imgs/2.png?raw=true)
  
+**三、singleTask**
+
+打开该模式下的Activity，系统会判断当前APP的整个Activity应用栈中存不存在此Activity，如果存在，那么就会将这个Activity置顶**【重点：同时会将刚才在此Activity之前的所有Activity都销毁】**，否则创建新的Activity。
+![singletask启动模式任务栈分析图](https://github.com/NateRobinson/Activity-Task-Final-Analysis/blob/master/imgs/3.png?raw=true)
+[下面的分析摘自《Android群英传》]另外，如果是其他的程序以singleTask模式来启动这个Activity，那么它将创建一个新的任务栈。不过这里有一点需要注意得是，如果启动的模式为SingleTask的Activity已经在后台的一个任务栈中了，那么启动后，后台的这个任务栈将一起被切换到前台，理解图如下：
+![singletask启动模式任务栈分析图](https://github.com/NateRobinson/Activity-Task-Final-Analysis/blob/master/imgs/4.png?raw=true)

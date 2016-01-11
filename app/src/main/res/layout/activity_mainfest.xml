@@ -13,4 +13,9 @@
         android:id="@+id/singletop_btn"
         style="@style/CustomButton"
         android:text="SingleTop启动模式" />
+
+    <Button
+        android:id="@+id/singletask_btn"
+        style="@style/CustomButton"
+        android:text="SingleTask启动模式" />
 </LinearLayout>
