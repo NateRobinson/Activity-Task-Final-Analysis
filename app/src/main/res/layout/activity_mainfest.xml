@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.gu.task.MainActivity">
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/androidmainifest_btn"
+        android:id="@+id/standard_btn"
         style="@style/CustomButton"
-        android:text="AndroidMainifest中设置启动模式" />
+        android:text="Standard启动模式" />
+
 </LinearLayout>
