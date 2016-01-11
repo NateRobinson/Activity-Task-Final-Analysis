@@ -37,3 +37,8 @@ Activity任务栈模式终极分析：在吸收了网络上各路大神的分析
 
 打开该模式下的Activity，系统会单独为此Activity创建一个Task，如果此时又有其他应用要打开此Activity，就不需要再创建了，这样两个应用就可以共享该Activity了。
 ![singleinstance启动模式任务栈分析图](https://github.com/NateRobinson/Activity-Task-Final-Analysis/blob/master/imgs/5.png?raw=true)
+
+**五、一些注意点**
+
+使用singletop和singleinstance这两种模式的Activity中，不能使用startActivityForResult()方法来启动另一个Activity,具体讲解见网上大神博客：<a href="http://blog.csdn.net/xiabo851205/article/details/8491267" target="_blank">http://blog.csdn.net/xiabo851205/article/details/8491267</a>
+
