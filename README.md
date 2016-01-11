@@ -67,3 +67,29 @@ Activity任务栈模式终极分析：在吸收了网络上各路大神的分析
 **四、Intent.FLAG_ACTIVITY_NO_HISTORY**
 
 使用了该模式的Activity，当这个Activity启动了其他的Activity之后就会消失，不会存在任务栈之中。
+
+## 清空任务栈 ##
+
+**一、clearTaskOnLaunch**
+
+在AndroidManifest.xml的<activity>标签中设置：
+
+    `android:clearTaskOnLaunch="true/false"`
+
+此属性默认为false，为true时，每次返回该Activity时，都会将其之上所有的Activity清除。通过这个属性，可以让每个APP在初始化的时候，都只有一个Activity。
+
+**二、finishOnTaskLaunch**
+
+在AndroidManifest.xml的<activity>标签中设置：
+
+    `android:finishOnTaskLaunch="true/false"`
+
+此属性默认为false，为true时，当离开了这个Activity所在的Task，用户再返回的时候，该Activity就会finish掉。
+
+**三、alwaysRetainTaskState**
+
+在AndroidManifest.xml的<activity>标签中设置：
+
+    `android:alwaysRetainTaskState="true/false"`
+
+此属性默认为false，为true时，则该Activity所在的Task将不受任务清理命令，一直保持当前状态。
