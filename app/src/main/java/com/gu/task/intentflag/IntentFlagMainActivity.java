@@ -28,26 +28,5 @@ public class IntentFlagMainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
-        findViewById(R.id.singletop_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(IntentFlagMainActivity.this, SingleTopActivity.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.singletask_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(IntentFlagMainActivity.this, SingleTaskActivity.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.singleinstance_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(IntentFlagMainActivity.this, SingleInstaceActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

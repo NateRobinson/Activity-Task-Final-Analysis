@@ -9,18 +9,4 @@
         style="@style/CustomButton"
         android:text="FLAG_ACTIITY_NEW_TASK" />
 
-    <Button
-        android:id="@+id/singletop_btn"
-        style="@style/CustomButton"
-        android:text="SingleTop启动模式" />
-
-    <Button
-        android:id="@+id/singletask_btn"
-        style="@style/CustomButton"
-        android:text="SingleTask启动模式" />
-
-    <Button
-        android:id="@+id/singleinstance_btn"
-        style="@style/CustomButton"
-        android:text="SingleInstance启动模式" />
 </LinearLayout>
