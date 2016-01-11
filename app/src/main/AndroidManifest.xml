@@ -24,6 +24,9 @@
         <activity
             android:name=".androidmainifest.singletask.SingleTaskActivity"
             android:launchMode="singleTask" />
+        <activity
+            android:name=".androidmainifest.singleinstance.SingleInstaceActivity"
+            android:launchMode="singleInstance" />
     </application>
 
 </manifest>
