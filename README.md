@@ -72,7 +72,7 @@ Activity任务栈模式终极分析：在吸收了网络上各路大神的分析
 
 **一、clearTaskOnLaunch**
 
-在AndroidManifest.xml的<activity>标签中设置：
+在AndroidManifest.xml的`<activity>`标签中设置：
 
     `android:clearTaskOnLaunch="true/false"`
 
@@ -80,7 +80,7 @@ Activity任务栈模式终极分析：在吸收了网络上各路大神的分析
 
 **二、finishOnTaskLaunch**
 
-在AndroidManifest.xml的<activity>标签中设置：
+在AndroidManifest.xml的`<activity>`标签中设置：
 
     `android:finishOnTaskLaunch="true/false"`
 
@@ -88,7 +88,7 @@ Activity任务栈模式终极分析：在吸收了网络上各路大神的分析
 
 **三、alwaysRetainTaskState**
 
-在AndroidManifest.xml的<activity>标签中设置：
+在AndroidManifest.xml的`<activity>`标签中设置：
 
     `android:alwaysRetainTaskState="true/false"`
 
